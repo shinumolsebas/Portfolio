@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel = "stylesheet" href="style.css">
+    <link rel="stylesheet" href ="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src = "images/logo.jfif" class="logo">
+                <ul>
+                    <li><a href = "#header"> Home</a></li>
+                    <li><a href = "#about"> About </a></li>
+                    <li><a href = "#project"> Projects</a></li>
+                    <li><a href = "#contact"> Contact</a></li>
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </ul>
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <!---<img src="images/menu.png">--->
+            </nav>
+            <div class="headr-text">
+                <p>Frontend Developer</p>
+                <h1>Hi, I am <span>Shinumol </span>Sebastian</h1>
+            </div>
+        </div>
+    </div>
+
+<!--------------About------------------------>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src = "images/photo1.JPG">
+                </div>
+                <div class="about-col-2">
+                    <h1 class = "sub-title">About Me</h1>
+                    <p>My name is Shinumol Sebastian. I graduated from Centennial College,Ontario a month ago.I am always open to challenges and constructive feedback. 
+                        I am open minded and learn new things quickly.<br><br> I am working as Data Collection Clerk at Statistics Canada (Remote). I live in Sydney, Nova Scotia.</p>
+                        
+                        <div class="tab-titles">
+                            <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
+                           <!-- <p class = "tab-links">Experience</p> -->
+                            <p class = "tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>HTML</span></li>
+                                <li><span>CSS</span><br></li>
+                                <li><span>JavaScript</span><br></li>
+                                <li><span>SQL</span><br></li>
+                                <li><span>API</span><br></li>
+                                <li><span>Unix/Linux Operating Systems</span><br></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id= "education">
+                            <ul>
+                                <li><span>2024</span><br>Diploma in Software Engineering Technician(Online)<br> Centennial College, Ontario<br>GPA - 3.9</li>
+                                <li><span>2009</span><br>Bachelors Degree in Electronics<br> Kannur University, India</li>
+                                
+                            </ul>
+                        </div>
+                        
+                 
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!---------------------Projects-------------->
+
+<div id="project">
+    <div class="container">
+        <h1 class = "sub-title">Projects</h1>
+        <div class="work-list">
+           
+            <div class="work">
+                <img src="images/photo2.jpg">
+                <div class="layer">
+                    <h3>Image Gallery</h3>
+                    <p>Move forward, backword, mouse scroll images with hover effect in the image gallery</p>
+                    <a href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/photo3.jpg">
+                <div class="layer">
+                    <h3>Weather App</h3>
+                    <p>Provides realtime weather data using API</p>
+                    <a href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/photo4.jpg">
+                <div class="layer">
+                    <h3>News App</h3>
+                    <p>Live news app with React</p>
+                    <a href="#"><i class="fa fa-external-link" ></i></a>
+                </div>
+            </div>
+            
+        </div>
+        <a href="#" class = "btn">See more</a>
+
+    </div>
+</div>
+
+<!--------------Contact-------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa fa-paper-plane" aria-hidden="true"></i>shinualepy@gmail.com</p>
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i>902-719-0585</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+                <a href="images/Resume.pdf" download class ="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="0b938b9c-c431-4d17-9fd5-4bc646ed04c9">
+                    <input type = "text" name="Name" placeholder="Your Name" required>
+                    <input type = "email"  name="Email" placeholder="Your Email" required>
+                    <textarea name = "message" rows = "6"placeholder="Your Message"></textarea>
+                    <button type=" submit" class = "btn btn3">Submit</button>
+                </form>
+
+                
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Shinumol Sebastian 2024</p>
+    </div>
+</div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    
+</body>
+</html>
